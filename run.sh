@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in $(seq -f "%04g" 0 500); do
+for i in $(seq -f "%04g" 0 200); do
   echo item: $i
   curl -XPUT "http://admin:notsecure@localhost:9200/many-${i}"
   sleep 1
